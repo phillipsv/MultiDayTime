@@ -1,0 +1,22 @@
+{
+  "name": "MultiDayTime",
+  "version": "1.0.0",
+  "description": "Day and time picker",
+  "main": "src/mdt.jquery.js",
+  "authors": [
+    "Vineet Phillips"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+ "dependencies": {
+    "jquery": "*"
+  },
+}
