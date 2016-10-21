@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Multitime selection demo</title>
+    <link href="bower_components/jt.timepicker/jquery.timepicker.css" type="text/css" rel="stylesheet">
     <link href="css/mdt.jquery.css" type="text/css" rel="stylesheet">
 </head>
 <body>
@@ -25,7 +26,7 @@
         $(document).ready(function(){
             $("#daytime-selector").multiDayTime({
                 value:
-                [{"day":"monday","start_time":"00:30:00","end_time":"01:30:00"},{"day":"tuesday","start_time":"01:45:00","end_time":"02:30:00"}]
+                [{"day":"monday","start_time":"00:30:00","end_time":"01:30:00"},{"day":"tuesday","start_time":"02:00:00","end_time":"02:30:00"}]
             });
 
             $(".submit_a").on("click",function(e){

@@ -20,3 +20,7 @@
     margin:10px 0px;
     font-size:0.9em;
 }
+
+.ui-timepicker-wrapper{
+    font-size:0.8666em !important;
+}
