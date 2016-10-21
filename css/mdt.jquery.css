@@ -1,0 +1,22 @@
+.multidaytime-container {
+    padding: 10px;
+}
+
+.multidaytime-container .multidaytime-li {
+    padding: 6px 0px;
+}
+
+.multidaytime-container select.multidaytime-select-day {
+    margin-right: 10px;
+}
+
+.multidaytime-container .remove-li {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 0.7em;
+}
+
+.multidaytime-container .multidaytime-button-panel{
+    margin:10px 0px;
+    font-size:0.9em;
+}
