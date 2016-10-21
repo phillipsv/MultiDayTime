@@ -120,7 +120,7 @@
             $("#"+id).timepicker();
         },
         drawButtons: function () {
-            this.$element.find("." + this.button_panel_class).append("<a href='#' class='" + this.button_panel_add_class + "'>Add Time</a>");
+            this.$element.find("." + this.button_panel_class).append("<a href='#' class='" + this.button_panel_add_class + "'>"+this.options.addLang+"</a>");
         },
 
         validateTime: function(time){
@@ -174,14 +174,14 @@
                     start_time_obj = $(this).children("." +  _self.select_start_time_class).eq(0).timepicker("getTime");
                     end_time_obj = $(this).children("." +  _self.select_end_time_class).eq(0).timepicker("getTime");
 
-                    tmp.start_time = _self.padZero( start_time_obj.getHours() )+":"+ _self.padZero(start_time_obj.getMinutes())+":"+ _self.padZero(start_time_obj.getSeconds());
-                    tmp.end_time =  _self.padZero(end_time_obj.getHours())+":"+ _self.padZero(end_time_obj.getMinutes())+":"+ _self.padZero(end_time_obj.getSeconds());
-
-                    console.log(tmp);
-                    if(!_self.validateTime(tmp.start_time) || !_self.validateTime(tmp.end_time)){
+                    if(!start_time_obj || !end_time_obj){
                         error_message = "Invalid time values";
                         return false;
                     }
+
+                    tmp.start_time = _self.padZero( start_time_obj.getHours() )+":"+ _self.padZero(start_time_obj.getMinutes())+":"+ _self.padZero(start_time_obj.getSeconds());
+                    tmp.end_time =  _self.padZero(end_time_obj.getHours())+":"+ _self.padZero(end_time_obj.getMinutes())+":"+ _self.padZero(end_time_obj.getSeconds());
+
 
                     if(tmp.start_time >= tmp.end_time){
                         error_message = "The end time should be greater than the start";
@@ -235,7 +235,8 @@
     }
 
     $.fn.multiDayTime.defaults = {
-        value: null
+        value: null,
+        addLang: 'Add'
     };
 
 })(jQuery);
