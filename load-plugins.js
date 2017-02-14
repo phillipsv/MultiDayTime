@@ -20,8 +20,9 @@ else{
 
 function setup_plugins(plugins){
     console.log("yeah this is working");
-    console.log(videojs);
-    console.log(plugins);
+    console.log(typeof videojs);
+    console.log(typeof plugins);
+    console.log(typeof videojs.players);
     if(typeof videojs === 'function' && typeof plugins === 'object' && typeof videojs.players === 'object'){
         for (player_id in videojs.players) {
 
