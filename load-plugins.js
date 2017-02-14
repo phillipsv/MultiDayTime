@@ -24,6 +24,8 @@ function setup_plugins(plugins){
     console.log(typeof plugins);
     console.log(typeof videojs.players);
     if(typeof videojs === 'function' && typeof plugins === 'object' && typeof videojs.players === 'object'){
+        console.log("in the cond");
+        console.log(videojs.players);
         for (player_id in videojs.players) {
 
             var player = videojs.players[player_id];
